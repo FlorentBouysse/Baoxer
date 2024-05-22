@@ -1,0 +1,194 @@
+@media screen and (min-width: 850px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dark-mod {
+  background-color: #242424;
+}
+.dark-mod-gradient {
+  background: linear-gradient(#242424, #a92020);
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+    display: flex;
+  }
+  .header-component {
+    border-radius: 0px 20px 20px 0px;
+  }
+}
+
+@keyframes appearFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes appearFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes appearFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.dragonRoar-button {
+  background: url('/asset/Skills/dragon-roar.png');
+  background-size: cover;
+  background-position: center;
+}
+.heal-button {
+  background: url('/asset/Skills/heal.png');
+  background-size: cover;
+  background-position: center;
+}
+.protectiveAura-button {
+  background: url('/asset/Skills/protective-aura.png');
+  background-size: cover;
+  background-position: center;
+}
+.fatalStrike-button {
+  background: url('/asset/Skills/fatal-strike.png');
+  background-size: cover;
+  background-position: center;
+}
+.shadowProjection-button {
+  background: url('/asset/Skills/shadow-protection.png');
+  background-size: cover;
+  background-position: center;
+}
+.meditation-button {
+  background: url('/asset/Skills/meditation.png');
+  background-size: cover;
+  background-position: center;
+}
+.perfectParry-button {
+  background: url('/asset/Skills/perfect-parry.png');
+  background-size: cover;
+  background-position: center;
+}
+.steelShard-button {
+  background: url('/asset/Skills/steel-shard.png');
+  background-size: cover;
+  background-position: center;
+}
+.danceDefense-button {
+  background: url('/asset/Skills/dance-defense.png');
+  background-size: cover;
+  background-position: center;
+}
+.throwPunch-button {
+  background: url('/asset/Skills/throw-punch.png');
+  background-size: cover;
+  background-position: center;
+}
+.spinStrike-button {
+  background: url('/asset/Skills/spin-strike.png');
+  background-size: cover;
+  background-position: center;
+}
+.brokenElbow-button {
+  background: url('/asset/Skills/elbow-kick.png');
+  background-size: cover;
+  background-position: center;
+}
+.comboFlurry-button {
+  background: url('/asset/Skills/comboFlurry.png');
+  background-size: cover;
+  background-position: center;
+}
+.kneeStrike-button {
+  background: url('/asset/Skills/kneeStrike.png');
+  background-size: cover;
+  background-position: center;
+}
+.groundSlam-button {
+  background: url('/asset/Skills/groundSlam.png');
+  background-size: cover;
+  background-position: center;
+}
+.flurry-button {
+  background: url('/asset/Skills/flurry.png');
+  background-size: cover;
+  background-position: center;
+}
+.leftHook-button {
+  background: url('/asset/Skills/leftHook.png');
+  background-size: cover;
+  background-position: center;
+}
+.counter-button {
+  background: url('/asset/Skills/counter.png');
+  background-size: cover;
+  background-position: center;
+}
+.block-button {
+  background: url('/asset/Skills/block.png');
+  background-size: cover;
+  background-position: center;
+}
+.dodge-button {
+  background: url('/asset/Skills/dodge.png');
+  background-size: cover;
+  background-position: center;
+}
+.highKick-button {
+  background: url('/asset/Skills/highKick.png');
+  background-size: cover;
+  background-position: center;
+}
+.uppercut-button {
+  background: url('/asset/Skills/uppercut.png');
+  background-size: cover;
+  background-position: center;
+}
+.lowKick-button {
+  background: url('/asset/Skills/lowKick.png');
+  background-size: cover;
+  background-position: center;
+}
+.kick-button {
+  background: url('/asset/Skills/kick.png');
+  background-size: cover;
+  background-position: center;
+}
+.punch-button {
+  background: url('/asset/Skills/punch.png');
+  background-size: cover;
+  background-position: center;
+}
+.noEnergy-button {
+  background: url('/asset/Skills/noEnergy.png');
+  background-size: cover;
+  background-position: center;
+}

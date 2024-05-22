@@ -1,0 +1,25 @@
+/* 
+Navigateur
+*/
+@media screen and (min-width: 850px) {
+  .Bedroom {
+    background: url('asset/Home/Leonardo_Diffusion_XL_une_chambre_vue_intrieur_en_pixel_art_ja_0.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* 
+Téléphone
+*/
+@media screen and (max-width: 850px) {
+  .Bedroom {
+    background: url('asset/Home/Leonardo_Diffusion_XL_une_chambre_vue_intrieur_en_pixel_art_ja_0.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+}

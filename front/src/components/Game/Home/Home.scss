@@ -1,0 +1,350 @@
+/* 
+Navigateur
+*/
+@media screen and (min-width: 850px) {
+  .Home {
+    height: 100vh;
+    background: url('asset/Home/Leonardo_Diffusion_XL_une_chambre_vue_intrieur_en_pixel_art_ja_0.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: relative;
+    padding: 10vh 8vw;
+
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      margin-top: 60px;
+
+      & .work-container-element:nth-child(4),
+      & .work-container-element:nth-child(5),
+      & .work-container-element:nth-child(6) {
+        opacity: 0.5;
+      }
+
+      & .work-container-element:nth-child(1),
+      & .work-container-element:nth-child(2),
+      & .work-container-element:nth-child(3) {
+        animation: appearFromTop 0.5s ease;
+      }
+      & .work-container-element:nth-child(4),
+      & .work-container-element:nth-child(5),
+      & .work-container-element:nth-child(6) {
+        animation: appearFromBottom 0.5s ease;
+      }
+      .gym-container-element {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 50%;
+
+        .red {
+          background-color: #a02020;
+        }
+        .blue {
+          background-color: #5b87b9;
+        }
+        .green {
+          background-color: rgb(78, 175, 78);
+        }
+        .orange {
+          background-color: #d69642;
+        }
+        .purple {
+          background-color: rgb(177, 58, 177);
+        }
+
+        h2 {
+          font-size: 1.3em;
+        }
+        &-content {
+          .lit {
+            background: url('public/asset/Bedroom/bed2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .ordinateur {
+            background: url('public/asset/Computer/ecran2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .musculation {
+            background: url('public/asset/Muscu/muscu2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .courir {
+            background: url('public/asset/Run/run1.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .frigo {
+            background: url('public/asset/Fridge/fridge1.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .escalader {
+            background: url('public/asset/Climb/escalade2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+
+          .description {
+            //
+          }
+        }
+        button {
+          width: 100%;
+          font-size: 1.3em;
+        }
+      }
+      .button {
+        width: 150px;
+        height: 50px;
+        position: fixed;
+        height: 5%;
+        width: 5%;
+        min-width: fit-content;
+        border: none;
+        border: solid 1px rgb(255, 255, 255);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @keyframes buttonPop {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  .select-training {
+    flex-grow: 1;
+  }
+  .description {
+    background-color: #d28c8c;
+  }
+  .work-container-element {
+    background-color: #539051;
+    &:hover {
+      box-shadow: 0 0 60px black;
+      transform: scale(1.1);
+      transition: box-shadow 1s ease, transform 1s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 1720px) {
+  .Home {
+    padding: 8vh 15vw;
+    &-content {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+/*
+Téléphone
+*/
+@media screen and (max-width: 850px) {
+  .Home {
+    background: url('asset/Home/Leonardo_Diffusion_XL_une_chambre_vue_intrieur_en_pixel_art_ja_0.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: relative;
+    font-size: 0.5em;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .green {
+      background-color: rgb(78, 175, 78);
+      h2,
+      p,
+      button {
+        background-color: #539051;
+      }
+    }
+    .orange {
+      background-color: #d69642;
+      h2,
+      p,
+      button {
+        background-color: #704e22;
+      }
+    }
+    .purple {
+      background-color: rgb(172, 104, 172);
+      h2,
+      p,
+      button {
+        background-color: rgb(106, 34, 106);
+      }
+    }
+
+    &-content {
+      padding-top: 50px;
+      padding-left: 0px;
+      padding-right: 0px;
+      display: grid;
+      gap: 1em;
+      .work-container-element:nth-child(4),
+      .work-container-element:nth-child(5),
+      .work-container-element:nth-child(6) {
+        opacity: 0.3;
+      }
+      .gym-container-element {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 50%;
+
+        .red {
+          background-color: #a02020;
+        }
+        .blue {
+          background-color: #5b87b9;
+        }
+        .green {
+          background-color: rgb(78, 175, 78);
+        }
+        .orange {
+          background-color: #d69642;
+        }
+        .purple {
+          background-color: rgb(177, 58, 177);
+        }
+
+        h2 {
+          font-size: 1.3em;
+        }
+        &-content {
+          display: grid;
+          .lit {
+            background: url('public/asset/Bedroom/bed2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .ordinateur {
+            background: url('public/asset/Computer/ecran2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .musculation {
+            background: url('public/asset/Muscu/muscu2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .courir {
+            background: url('public/asset/Run/run1.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .frigo {
+            background: url('public/asset/Fridge/fridge1.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+          .escalader {
+            background: url('public/asset/Climb/escalade2.jpg');
+            background-position: center;
+            background-size: cover;
+          }
+
+          .description {
+            //
+          }
+        }
+        button {
+          width: 100%;
+          font-size: 1.3em;
+        }
+      }
+      .button {
+        width: 150px;
+        height: 50px;
+        position: fixed;
+        height: 5%;
+        width: 5%;
+        min-width: fit-content;
+        border: none;
+        border: solid 1px rgb(255, 255, 255);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bed {
+        top: 60%;
+        left: 3%;
+        background: url('https://blendicons.s3.eu-central-1.amazonaws.com/files/v-MXPKAvOJzaq_cprQ1a.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: buttonPop 2s ease-in-out infinite;
+      }
+      .computer {
+        top: 40%;
+        left: 55.6%;
+        background: url('https://blendicons.s3.eu-central-1.amazonaws.com/files/6uC0WtYGbTceiR8QOqAw.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: buttonPop 2s ease-in-out infinite;
+      }
+      .bodybuilding {
+        top: 40%;
+        left: 25.9%;
+        background: url('https://blendicons.s3.eu-central-1.amazonaws.com/files/qW1zYvpAYInLC74FMypt.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: buttonPop 2s ease-in-out infinite;
+      }
+      .running {
+        top: 70%;
+        left: 72%;
+        background: url('https://blendicons.s3.eu-central-1.amazonaws.com/files/vMWhDVYCkmBF1E1sEx8b.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: buttonPop 2s ease-in-out infinite;
+      }
+      .fridge {
+        top: 75%;
+        left: 53%;
+        background: url('https://blendicons.s3.eu-central-1.amazonaws.com/files/HzTHn6389R69GO42PrsZ.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: buttonPop 2s ease-in-out infinite;
+      }
+    }
+    @keyframes buttonPop {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}

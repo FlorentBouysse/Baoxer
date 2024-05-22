@@ -1,0 +1,198 @@
+// Market.scss
+
+.market {
+  display: flex;
+  justify-content: center;
+  background: url('asset/Home/Leonardo_Diffusion_XL_un_magasin_vue_intrieur_en_pixel_art_jap_1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 10vh 8vw;
+}
+
+.market-table {
+  display: inline;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 90%;
+
+  .market-title {
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
+      4px 4px 0 #000;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    animation: floatAnimation 1s ease infinite;
+  }
+
+  @media screen and (min-width: 850px) {
+    padding: 2em 3em;
+  }
+
+  .table-header,
+  .table-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    @media screen and (min-width: 850px) {
+      padding: 15px;
+    }
+  }
+
+  .table-header {
+    font-weight: bold;
+    text-align: center;
+    @media screen and (min-width: 850px) {
+      background-color: #a02020;
+      color: white;
+    }
+  }
+
+  .item-name {
+    font-size: 1.2em;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.487);
+  }
+
+  .table-row {
+    text-align: center;
+    p {
+      margin: 5px 0.2em;
+    }
+  }
+  .item-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.421);
+  }
+
+  .row-container {
+    height: 50vh;
+    overflow-y: scroll;
+  }
+
+  .row-container::-webkit-scrollbar {
+    height: 10px;
+    width: 7px;
+  }
+
+  // scroll bar
+  .row-container::-webkit-scrollbar-thumb {
+    background-color: #8d8d8d;
+  }
+
+  // arriere plan de la scroll bar
+  .row-container::-webkit-scrollbar-track {
+    background-color: rgb(225, 225, 225);
+  }
+
+  button {
+    padding: 5px 10px;
+    margin: 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    animation: fadeInUp 0.5s ease-in-out;
+
+    .purchased-item-icon {
+      width: 64px;
+      height: 64px;
+      margin-top: 10px;
+
+      animation: floatAnimation 1s ease infinite;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatAnimation {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+}

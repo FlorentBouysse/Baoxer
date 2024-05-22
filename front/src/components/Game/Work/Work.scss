@@ -1,0 +1,313 @@
+.work {
+  background: url('../../../../public/asset/Work/background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  .description {
+    font-size: 1.3em;
+    box-shadow: 5px 5px 15px black;
+  }
+  .work-container-element {
+    h2 {
+      font-size: 2em;
+      box-shadow: 5px 5px 15px black;
+    }
+  }
+  .select-working {
+    flex-grow: 1;
+    box-shadow: 5px 5px 15px black;
+  }
+  .work-container-element-content-image {
+    box-shadow: 5px 5px 15px black;
+  }
+
+  .ability-container {
+    padding: 10%;
+    width: 100%;
+    &-content.red {
+      background-color: rgba(205 79 79);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+      border-bottom: #361010 solid 5px;
+      h2 {
+        background-color: #a02020;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+        border-bottom: #361010 solid 4px;
+      }
+      .close {
+        background-color: #a02020;
+      }
+      .working {
+        h3 {
+          background-color: #661f1f;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+          border-bottom: #361010 solid 4px;
+        }
+        .training-content {
+          background-color: #ffbfbf;
+          border-bottom: #5d3e3e solid 4px;
+        }
+      }
+    }
+    &-content.blue {
+      background-color: rgba(79 152 205);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+      border-bottom: #141b29 solid 4px;
+      h2 {
+        background-color: #2045a0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+        border-bottom: #141b29 solid 4px;
+      }
+      .working {
+        h3 {
+          background-color: #2a3958;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+          border-bottom: #141b29 solid 4px;
+        }
+        .training-content {
+          background-color: #a4d3f5;
+          border-bottom: rgb(49, 96, 130) solid 4px;
+        }
+      }
+    }
+    &-content.yellow {
+      background-color: rgba(251 219 108);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+      border-bottom: rgb(112, 98, 46) solid 5px;
+      h2 {
+        background-color: #e09014;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+        border-bottom: rgb(84, 68, 8) solid 5px;
+      }
+      .working {
+        h3 {
+          background-color: #ae5114;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+          border-bottom: #652f0b solid 5px;
+        }
+        .training-content {
+          background-color: #fffebf;
+          border-bottom: rgb(112, 98, 46) solid 5px;
+        }
+      }
+    }
+    &-content {
+      padding: 1em;
+      border-radius: 20px;
+      position: relative;
+      width: 100%;
+      font-size: 1.5em;
+      h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+        border-radius: 20px;
+        font-size: 2em;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      h3:hover {
+        transform: scale(0.95);
+        transition: transform 0.3s ease;
+      }
+
+      .close {
+        position: absolute;
+        top: -15px;
+        right: -1%;
+        border-radius: 50%;
+        padding: 0.5em;
+        width: 30px;
+        height: 30px;
+        border: none;
+        color: white;
+        background-color: #a02020;
+      }
+      .working {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+        .working-headers {
+          display: flex;
+          justify-content: space-between;
+          gap: 1em;
+          h3 {
+            width: 100%;
+            text-align: center;
+            padding: 0.5em;
+            font-size: 1.5em;
+            border-radius: 20px;
+            color: white;
+          }
+        }
+        .training-content {
+          display: flex;
+          justify-content: space-between;
+          gap: 1em;
+          padding: 0.5em;
+          border-radius: 20px;
+          margin-top: 0.5em;
+
+          div {
+            width: 100%;
+            text-align: center;
+          }
+          p,
+          .launch {
+            width: 100%;
+            text-align: center;
+            padding: 0.5em;
+            border: none;
+          }
+          .launch {
+            width: 50%;
+            background-color: #20a02f;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.582);
+            border-bottom: #115a1a solid 4px;
+            font-size: 1.2em;
+          }
+          .launch:active {
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+
+  .currentWorking {
+    h2 {
+      padding: 0.4em;
+      margin-top: 0.5em;
+      height: fit-content;
+      span {
+        background-color: rgba(255, 255, 255, 0.459);
+        color: black;
+        border-radius: 20px;
+        padding: 0.2em;
+      }
+    }
+    .timer-working {
+      width: 100%;
+      border-radius: 20px;
+      margin-top: 0.5em;
+      p {
+        color: rgb(255, 255, 255);
+        border-radius: 20px;
+        padding: 0.3em;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 0.5em;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+        span {
+          letter-spacing: 3px;
+        }
+      }
+    }
+    .Mine {
+      background-color: #661f1f;
+    }
+    .Bureau {
+      background-color: #2a3958;
+    }
+    .Scrum {
+      background-color: #ae5114;
+    }
+  }
+
+  &-container {
+    padding-top: 280px;
+    padding-left: 350px;
+    padding-right: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    width: 90%;
+    &-element.red {
+      background-color: #f79e93;
+    }
+    &-element.yellow {
+      background-color: #f7da87;
+    }
+    &-element.blue {
+      background-color: #a0cdf3;
+    }
+
+    &-element {
+      //background-color: rgba(255, 255, 255, 0.471);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 1em;
+      border-radius: 20px;
+      box-shadow: 5px 5px 20px rgb(0, 0, 0);
+
+      .title {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        border-radius: 20px;
+        padding: 0.5em;
+        color: white;
+        text-shadow: 5px 5px 10px black;
+      }
+
+      .red {
+        background-color: #a02020;
+      }
+      .yellow {
+        background-color: #dccf40;
+      }
+      .blue {
+        background-color: #5b87b9;
+      }
+
+      &-content {
+        width: 100%;
+        .strength-icon {
+          background: url('../../../../public/asset/Work/mining-icon.png');
+          background-size: cover;
+          background-position: center;
+        }
+        .energy-icon {
+          background: url('../../../../public/asset/Work/office.png');
+          background-size: 160%;
+          background-position: 50% 65%;
+        }
+        .agility-icon {
+          background: url('../../../../public/asset/Work/cooking.png');
+          background-size: cover;
+          background-position: center;
+        }
+        &-image {
+          width: 100%;
+          height: 300px;
+          border-radius: 20px;
+          margin-top: 0.5em;
+        }
+        .description {
+          border-radius: 20px;
+          padding: 0.5em;
+          margin-top: 0.5em;
+          color: white;
+          text-shadow: 3px 3px 8px black;
+        }
+      }
+      button {
+        padding: 0.5em;
+        border: none;
+        border-radius: 20px;
+        margin-top: 0.5em;
+        font-size: 1.5em;
+        color: white;
+        text-shadow: 5px 5px 10px black;
+      }
+    }
+  }
+}

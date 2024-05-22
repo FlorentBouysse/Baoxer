@@ -1,0 +1,255 @@
+.skills {
+  //background: linear-gradient(rgb(255, 186, 186), rgb(131, 131, 212));
+  background: url('public/asset/site.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  padding: 12vh 5vw 5vh 8vw;
+  animation: scrollBackground 35s linear infinite alternate;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 0px;
+    background-color: rgba(0, 0, 0, 0.724);
+  }
+
+  .notAllowed {
+    background-color: #c51313;
+    margin-top: 1em;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0.5em;
+    color: yellow;
+  }
+
+  // scroll bar
+  &::-webkit-scrollbar-thumb {
+    background-color: #a0202000;
+  }
+
+  // arriere plan de la scroll bar
+  &::-webkit-scrollbar-track {
+    background-color: rgba(240, 192, 177, 0);
+  }
+
+  @keyframes scrollBackground {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes wiz {
+    0%,
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+    10% {
+      transform: rotate(-2deg) scale(1.05);
+    }
+    80% {
+      transform: rotate(2deg) scale(1.05);
+    }
+  }
+
+  &-list {
+    width: 49%;
+    height: 100%;
+    .defensive:hover,
+    .special:hover,
+    .basic:hover,
+    .heavy:hover {
+      animation: wiz 0.4s ease;
+    }
+    & .skills-container:nth-child(1) {
+      background: linear-gradient(rgb(78, 224, 78), rgb(38, 94, 38));
+    }
+    & .skills-container:nth-child(2) {
+      background: linear-gradient(rgb(208, 172, 128), rgb(164, 98, 5));
+    }
+    & .skills-container:nth-child(3) {
+      background: linear-gradient(rgb(128, 141, 208), rgb(5, 5, 164));
+    }
+    & .skills-container:nth-child(4) {
+      background: linear-gradient(rgb(217, 139, 221), rgb(103, 5, 164));
+    }
+  }
+
+  &-selected {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .skills-selected-list {
+      max-height: 24.15%;
+      height: 100%;
+      .skills-container {
+        .defensive:active,
+        .special:active,
+        .basic:active,
+        .heavy:active {
+          animation: fadeOff 0.5s ease;
+        }
+      }
+    }
+
+    @keyframes fadeOff {
+      0%,
+      100% {
+        transform: translateX(0px);
+      }
+      25% {
+        transform: rotate(-8deg) translateY(50px);
+      }
+      50% {
+        transform: translateY(100px) rotate(8deg);
+      }
+      75% {
+        transform: rotate(-8deg) translateY(50px);
+      }
+    }
+
+    .skills-info {
+      height: fit-content;
+    }
+
+    .start-fight {
+      width: 80%;
+      border-radius: 20px;
+      //flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 0.4em;
+      margin-top: auto;
+      box-shadow: 5px 5px 15px black;
+      animation: takeHit 4s ease-in-out infinite;
+      animation-delay: 0.28s;
+
+      .animation {
+        background: url('https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Sport-PNG/Boxing_Glove_PNG_Clip_Art.png?m=1507517702');
+        height: 90px;
+        width: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 10%;
+        position: absolute;
+        bottom: -0.4%;
+        right: 0%;
+        animation: bounceAnimation 4s ease-in-out infinite;
+      }
+
+      &-button {
+        width: 100%;
+        border-radius: 20px;
+        border: none;
+        background-color: red;
+        color: white;
+        text-transform: uppercase;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@keyframes bounceAnimation {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0) rotate(180deg);
+  }
+  40% {
+    transform: translateX(-80px) rotate(180deg);
+  }
+  60% {
+    transform: translateX(-15px) rotate(180deg);
+  }
+}
+@keyframes takeHit {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    width: 80%;
+  }
+  40% {
+    width: 75%;
+  }
+  60% {
+    width: 83%;
+  }
+}
+
+.skill-damage,
+.skill-energy {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 850px) {
+  .start-fight-button {
+    padding: 1em;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .skills {
+    height: 100vh;
+    font-size: 0.5em;
+    padding: 19.5vh 1vw 2vh 10vw;
+    &-list {
+      width: 43%;
+    }
+    .skills-container {
+      background: linear-gradient(#1d1d1d, #c51313);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.543);
+    }
+    .skills-selected {
+      position: absolute;
+      top: 1%;
+      right: 1%;
+      width: 50%;
+
+      &-list {
+        max-width: none;
+        height: fit-content;
+      }
+    }
+
+    &-list {
+      gap: 0.5em;
+    }
+    .start-fight {
+      width: 90%;
+      background-color: transparent;
+      box-shadow: 0 0 0;
+      animation: none;
+      .animation {
+        display: none;
+      }
+      a {
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+        .start-fight-button {
+          width: 80%;
+          padding: 0.5em;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}

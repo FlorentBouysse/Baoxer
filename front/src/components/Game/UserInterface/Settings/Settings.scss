@@ -1,0 +1,31 @@
+.settings-container {
+  position: fixed;
+  bottom: 12%;
+  right: 1%;
+  background-color: white;
+  width: 10%;
+  min-width: fit-content;
+  height: fit-content;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: #a02020;
+  color: white;
+  box-shadow: -5px 5px 20px black;
+  h2 {
+    font-size: 2em;
+    border-bottom: solid 2px white;
+    padding-bottom: 10px;
+  }
+  button {
+    margin-top: 1em;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 1.5em;
+  }
+  input {
+    width: 98%;
+    color: #a02020;
+    margin-top: 0.5em;
+  }
+}

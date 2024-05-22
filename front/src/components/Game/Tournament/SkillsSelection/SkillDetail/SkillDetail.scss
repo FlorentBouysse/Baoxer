@@ -1,0 +1,195 @@
+.skillDetail {
+  background: linear-gradient(#a02020, rgb(226, 171, 171));
+  margin-top: 1em;
+  border-radius: 20px;
+  height: fit-content;
+  padding: 1em;
+  border: solid 2px white;
+  box-shadow: 10px 10px 20px black;
+  text-shadow: 3px 3px 3px black;
+  p,
+  h4,
+  h5 {
+    background-color: rgba(255, 166, 0, 0.31);
+  }
+  &-info {
+    .special {
+      margin-top: 1em;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      border-radius: 20px;
+      padding: 0.5em;
+      h4 {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+        color: white;
+      }
+      p {
+        padding: 1em;
+        background-color: rgba(255, 255, 255, 0.288);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+        border-radius: 20px;
+        color: white;
+        margin-top: 10px;
+        font-size: 1.2em;
+      }
+    }
+    h4 {
+      width: 100%;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      border-radius: 20px;
+      padding: 0.5em;
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+    }
+    &-description {
+      width: 100%;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      border-radius: 20px;
+      padding: 0.5em;
+      margin-top: 1em;
+      p {
+        padding: 1em;
+        background-color: rgba(255, 255, 255, 0.288);
+        color: white;
+        border-radius: 20px;
+        margin-top: 10px;
+        font-size: 1.2em;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      }
+    }
+    &-cost {
+      background-color: rgba(255, 166, 0, 0.31);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      height: fit-content;
+      padding: 1em;
+      border-radius: 20px;
+
+      .section {
+        width: 49%;
+
+        &-container {
+          width: 100%;
+          background-color: rgb(43, 43, 43);
+          border-radius: 20px;
+          padding: 5px;
+
+          margin-top: 1em;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+          .damage {
+            background-color: red;
+            border-radius: 20px;
+            text-align: center;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .energy {
+            background-color: rgb(217, 255, 0);
+            border-radius: 20px;
+            text-align: center;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      h5 {
+        text-align: center;
+        border-radius: 20px;
+        font-size: 1.5em;
+        padding: 1em;
+        color: white;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.699);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .skillDetail {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.2em;
+    position: absolute;
+    top: 18.5%;
+    height: fit-content;
+    background: linear-gradient(#1d1d1d, #c51313);
+    h4,
+    h5,
+    p {
+      font-size: 1em;
+      padding: 0.5em;
+      text-align: center;
+      margin-bottom: 1px;
+      border-radius: 10px;
+    }
+    &-info {
+      border-radius: 10px;
+      &-cost {
+        margin-top: 5px;
+        border-radius: 10px;
+        padding: 0.5em;
+      }
+      h4 {
+        margin-bottom: 3px;
+        border-radius: 10px;
+      }
+    }
+
+    .description {
+      margin-top: 0;
+      border-radius: 10px;
+    }
+
+    .skillDetail-info-description {
+      padding: 5px;
+      margin-top: 5px;
+      border-radius: 10px;
+      p {
+        padding: 0.5em;
+        margin-top: 5px;
+        border-radius: 10px;
+      }
+    }
+    .section {
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+
+      &-container {
+        padding: 0;
+        margin: 0;
+        padding: 1px;
+        margin-top: 3px;
+        border-radius: 10px;
+
+        .damage,
+        .energy {
+          height: fit-content;
+          padding: 0.3em;
+        }
+      }
+    }
+    .special {
+      padding: 0.5em;
+      margin: 0;
+      margin-top: 0.5em;
+      border-radius: 10px;
+      p {
+        margin: 0;
+        font-size: 1em;
+      }
+    }
+  }
+}

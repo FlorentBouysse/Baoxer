@@ -1,0 +1,75 @@
+/*
+Navigateur
+*/
+@media screen and (min-width: 850px) {
+  .HomeView {
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    background-color: #a02020;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 130px;
+
+    &-container {
+      h2 {
+        color: white;
+      }
+      p {
+        color: white;
+        height: 120px;
+      }
+
+      .close {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: none;
+      }
+    }
+  }
+}
+
+/*
+Téléphone
+*/
+@media screen and (max-width: 850px) {
+  .HomeView {
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    background-color: #a02020;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 130px;
+
+    &-container {
+      h2 {
+        color: white;
+      }
+      p {
+        color: white;
+        height: 120px;
+      }
+
+      .close {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: none;
+      }
+    }
+  }
+}

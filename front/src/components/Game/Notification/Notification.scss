@@ -1,0 +1,39 @@
+.Notification {
+  position: fixed;
+  top: 1%;
+  height: fit-content;
+  width: 30%;
+  background: linear-gradient(#a02020, #c09595);
+  right: 1%;
+  padding: 0.8em;
+  border-radius: 20px;
+  border: white solid 3px;
+  text-shadow: 3px 3px 3px black;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  animation: popUp 1s ease alternate infinite;
+  h5 {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px black;
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.267);
+  }
+  @keyframes popUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  p {
+    box-shadow: 5px 5px 8px black;
+    border-radius: 20px;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.267);
+  }
+}

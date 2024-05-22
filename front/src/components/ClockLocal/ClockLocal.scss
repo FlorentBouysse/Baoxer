@@ -1,0 +1,22 @@
+.TimerRegenEnergy {
+  position: fixed;
+  top: 65px;
+  left: 495px;
+  box-shadow: 5px 5px 10px black;
+  z-index: 99;
+  border-radius: 10px;
+
+  .timer {
+    font-size: 1.5em;
+    width: fit-content;
+    background-color: #8d8d8d7e;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+.hidden {
+  display: none;
+}

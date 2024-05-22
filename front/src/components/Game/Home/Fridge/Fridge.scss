@@ -1,0 +1,177 @@
+/*
+Navigateur
+*/
+@media screen and (min-width: 850px) {
+  .fridge {
+    background: url('public/asset/Fridge/fridge1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    padding: 15vh 15vw;
+
+    .fridge-title {
+      font-size: 4em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
+        4px 4px 0 #000;
+      margin-bottom: 2%;
+      text-transform: uppercase;
+      animation: floatAnimation 1s ease infinite;
+    }
+
+    .fridge-table {
+      display: inline;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 90%;
+
+      .item-name {
+        font-size: 1.2em;
+      }
+
+      .table-header,
+      .table-row {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #f0f0f0;
+        padding: 2px;
+        border-radius: 2px 0 0 2px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+        @media screen and (min-width: 850px) {
+          padding: 15px;
+        }
+        &-name,
+        &-quantity {
+          width: 40%;
+        }
+      }
+
+      .table-row {
+        .item-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2em;
+          width: 40%;
+          img {
+            border-radius: 10px;
+          }
+        }
+        p {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .table-header {
+        font-weight: bold;
+        text-align: center;
+        @media screen and (min-width: 850px) {
+          background-color: #a02020;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/*
+Téléphone
+*/
+@media screen and (max-width: 850px) {
+  .fridge {
+    background: url('public/asset/Fridge/fridge1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    padding: 15vh 15vw;
+
+    .fridge-title {
+      font-size: 4em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
+        4px 4px 0 #000;
+      margin-bottom: 2%;
+      text-transform: uppercase;
+      animation: floatAnimation 1s ease infinite;
+    }
+
+    .fridge-table {
+      display: inline;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 90%;
+
+      .item-name {
+        font-size: 1.2em;
+      }
+
+      .table-header,
+      .table-row {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #f0f0f0;
+        padding: 2px;
+        border-radius: 2px 0 0 2px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+        @media screen and (min-width: 850px) {
+          padding: 15px;
+        }
+        &-name,
+        &-quantity {
+          width: 40%;
+        }
+      }
+
+      .table-row {
+        .item-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2em;
+          width: 40%;
+          img {
+            border-radius: 10px;
+          }
+        }
+        p {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .table-header {
+        font-weight: bold;
+        text-align: center;
+        @media screen and (min-width: 850px) {
+          background-color: #a02020;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+@media screen and (min-width: 850px) {
+  .header {
+    padding: 0 3em;
+    background-color: #a02020;
+    box-shadow: 0px 2px 35px black;
+    border-bottom: solid 5px #a02020;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+
+    .theme-container {
+      border-radius: 0 0 20px 20px;
+      border-bottom: solid 4px #242424;
+      position: absolute;
+      left: 11%;
+      box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.264);
+      .set-dark-mod {
+        border-radius: 0 0 20px 20px;
+        padding: 0 1.5em;
+        box-shadow: 0px 10px 12px #00000042;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 1em;
+        padding-bottom: 0.8em;
+        border-bottom: #6b1919 solid 4px;
+        &:hover {
+          border-bottom: #571414 solid 0px;
+          box-shadow: 0px 8px 8px #0000005f;
+          transition: box-shadow 0.4s ease, border-bottom 0.4s ease;
+        }
+      }
+    }
+
+    .active {
+      border-bottom: solid 0px black;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      margin-top: 0.5em;
+    }
+
+    &-links {
+      display: flex;
+      gap: 30px;
+      margin-top: 60px;
+      color: white;
+      a {
+        border-radius: 0 0 20px 20px;
+        padding: 0 1.5em;
+        box-shadow: 0px 10px 12px #00000042;
+        margin-bottom: 60px;
+        border-bottom: #6b1919 solid 8px;
+      }
+      a:hover {
+        border-bottom: #571414 solid 0px;
+        box-shadow: 0px 8px 8px #0000005f;
+        transition: box-shadow 0.4s ease, border-bottom 0.4s ease;
+      }
+    }
+
+    .user {
+      color: white;
+      width: fit-content;
+      margin-left: 4em;
+      button {
+        border: none;
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+  .header-component {
+    .menu-burger {
+      display: none;
+    }
+  }
+  .header-component.dark-mod {
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #a02020;
+    align-items: center;
+    padding: 0.5em;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
+
+    .set-dark-mod {
+      background: #a02020;
+      border: none;
+      padding: 0.4em;
+      border-radius: 20px;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin-top: 5px;
+      height: 100%;
+
+      .link {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 0.8em;
+        max-width: fit-content;
+      }
+    }
+
+    .user {
+      font-size: 0.8em;
+      margin-top: 20px;
+
+      h3 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        border-radius: 20px;
+        border: none;
+        margin-top: 10px;
+        font-size: 0.5em;
+      }
+    }
+  }
+
+  .header-closed {
+    display: none;
+  }
+
+  .header-component {
+    display: flex;
+    background-color: #a02020;
+    height: 100vh;
+    padding-right: 0.3em;
+    padding-top: 0.3em;
+  }
+
+  .menu-burger {
+    width: 20px;
+    height: 20px;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #a02020;
+    transform: rotate(90deg);
+  }
+}

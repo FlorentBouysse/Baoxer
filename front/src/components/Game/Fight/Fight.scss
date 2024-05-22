@@ -1,0 +1,203 @@
+.fight.Fighting {
+  height: 100vh;
+  width: 100%;
+  background: url('asset/Fight/Leonardo_Diffusion_XL_un_gif_dune_salle_de_ring_en_pixel_art_j_2.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .fight-info {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+
+    &-launch {
+      border: none;
+      border-radius: 20px;
+      padding: 1em;
+      text-transform: uppercase;
+      background-color: #a02020;
+      color: white;
+      font-size: 1.5em;
+      position: fixed;
+      bottom: 5%;
+    }
+  }
+
+  @keyframes identifier {
+    0% {
+      transform-origin: 50% 50%;
+      transform: scaleX(0.5);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  .fight-preview {
+    background: linear-gradient(#a02020, #ce6d6d);
+  }
+
+  &-preview {
+    width: 60%;
+    height: fit-content;
+    //min-height: 50%;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    border-radius: 20px;
+    padding: 1em;
+    box-shadow: 5px 5px 30px black;
+    text-shadow: 3px 3px 5px black;
+    .fight-info-close {
+      position: fixed;
+      top: 3.5%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background-color: #d09494;
+      left: 89%;
+      color: white;
+      box-shadow: 5px 5px 30px black;
+    }
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      background-color: #d09494;
+      border-radius: 20px;
+      padding: 0.5em;
+      color: white;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.388);
+      animation: identifier 1.3s ease-in-out;
+    }
+    .main-title {
+      background-color: #e28742;
+      animation: identifier 0s ease;
+    }
+    .npc-info {
+      min-height: 40vh;
+      display: flex;
+      padding: 1em 0;
+
+      &-detail {
+        width: 58%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          width: 100%;
+          margin-bottom: 0.5em;
+        }
+        .description {
+          background-color: #5a4040;
+          color: white;
+          padding: 0.5em;
+          border-radius: 20px;
+          margin-bottom: 0.5em;
+          text-align: center;
+        }
+        .stats {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .health-bar,
+          .energy-bar {
+            margin-bottom: 0.5em;
+            background-color: black;
+            width: 49%;
+            border-radius: 20px;
+            padding: 5px;
+          }
+          .health {
+            background-color: red;
+            width: 100%;
+            border-radius: 20px;
+            text-align: center;
+          }
+          .energy {
+            background-color: rgb(208, 255, 0);
+            width: 100%;
+            border-radius: 20px;
+            text-align: center;
+          }
+        }
+        .npc-skills {
+          width: 100%;
+          height: 100px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 0.5em;
+
+          .skill {
+            width: 100%;
+            height: 90%;
+            background-color: rgb(71, 36, 36);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+          }
+        }
+        a {
+          .start {
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+            background-color: #a02020;
+            font-size: 2em;
+            text-transform: uppercase;
+            color: white;
+            margin-top: 0.5em;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.367);
+            padding: 0.5em;
+          }
+        }
+      }
+    }
+    .npc-avatar {
+      background-color: white;
+      height: 100%;
+      width: 40%;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fight {
+    font-size: 0.5em;
+    &-info {
+      &-launch {
+        bottom: 3%;
+      }
+    }
+    &-preview {
+      left: 35%;
+      top: 3%;
+      border-radius: 10px;
+      width: 63%;
+      .fight-info-close {
+        width: 20px;
+        height: 20px;
+        top: 1%;
+        position: fixed;
+        left: 96%;
+      }
+      .npc-info {
+        &-detail {
+          .npc-skills {
+            height: 60px;
+          }
+          a {
+            .start {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

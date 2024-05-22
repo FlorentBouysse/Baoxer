@@ -1,0 +1,56 @@
+.game {
+  width: 100%;
+  min-height: 100vh;
+  //background: linear-gradient(lightblue, #a02020);
+  background: url('public/asset/Leonardo_Diffusion_XL_une_maison_vue_extrieur_en_pixel_art_jap_1.jpg');
+  animation: scrollBackground 20s ease infinite alternate;
+  background-size: cover;
+
+  @keyframes scrollBackground {
+    from {
+      background-position-x: 0% 0%;
+      background-size: cover;
+    }
+    to {
+      background-position-x: 30% 30%;
+      background-size: cover;
+    }
+  }
+
+  .loader {
+    position: absolute;
+    background: url('https://art.pixilart.com/eab99c6c66a7084.gif');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    transition: width 0.5s ease;
+    transition: opacity 0.5s ease;
+    animation: identifier 0.8s ease;
+  }
+
+  @keyframes identifier {
+    0% {
+      width: 100vw;
+    }
+    50% {
+      width: 100vw;
+      opacity: 1;
+    }
+    100% {
+      width: 0vw;
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Modal {
+    bottom: 82%;
+    left: 40%;
+    font-size: 0.8;
+    padding: 0.5em;
+  }
+}

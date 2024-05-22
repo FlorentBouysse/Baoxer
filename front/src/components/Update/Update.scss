@@ -1,0 +1,192 @@
+@media screen and (max-width: 850px) {
+  .update {
+    padding: 0 0.5em;
+    height: 100vh;
+    text-align: center;
+    max-width: 100vw;
+
+    h3 {
+      font-size: 1em;
+      background-color: #dc6969;
+      border-radius: 20px;
+      padding: 0.3em;
+      color: white;
+    }
+    h5 {
+      font-size: 1em;
+      background-color: #a02020;
+      border-radius: 0 0 20px 20px;
+      padding: 0.3em;
+      color: white;
+      position: sticky;
+      top: -0%;
+    }
+
+    .dark-mod {
+      background-color: #2a2a2a;
+    }
+
+    &-content-second {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5em;
+    }
+    &-content-third {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      display: grid;
+      gap: 0.5em;
+    }
+    &-content-first {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      display: grid;
+      gap: 0.5em;
+    }
+
+    &-content {
+      height: 95%;
+      overflow-y: scroll;
+      max-width: 100vw;
+
+      .update-content-row {
+        background-color: #212121d0;
+        border-radius: 20px;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        box-shadow: 3px 3px 15px black;
+
+        h4 {
+          background-color: rgba(255, 255, 255, 0.562);
+          border-radius: 20px;
+          padding: 0.5em;
+          font-size: 0.8em;
+        }
+
+        li {
+          color: white;
+          font-size: 0.6em;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 850px) {
+  .update {
+    padding: 0 5%;
+    padding-top: 3em;
+
+    &-content::-webkit-scrollbar {
+      height: 10px;
+      width: 7px;
+    }
+
+    &-content::-webkit-scrollbar-thumb {
+      background-color: #00000000;
+      border-radius: 20px;
+    }
+    &-content::-webkit-scrollbar-track {
+      background-color: rgba(240, 192, 177, 0);
+      border-radius: 20px;
+    }
+
+    h5 {
+      font-size: 1.5em;
+      background-color: rgb(156 43 43);
+      padding: 0.5em;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: sticky;
+      top: -0%;
+      margin-bottom: -0.5em;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.543);
+      border-bottom: solid #862e2e 5px;
+      margin-top: 1.5em;
+    }
+    h5:nth-of-type(1) {
+      margin-top: 0;
+    }
+    .dark-mod {
+      background-color: #2a2a2a;
+    }
+    &-content {
+      max-height: 80vh;
+      overflow-y: scroll;
+      padding-right: 0.5em;
+      border-radius: 20px;
+      padding: 0 1em 1em 1.5em;
+      animation: appear 1s ease;
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(200px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+    &-content-second,
+    &-content-third,
+    &-content-first {
+      height: 90%;
+      display: grid;
+      //gap: 0.7em;
+    }
+
+    &-content-second {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &-content-third {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &-content-first {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    &-content-row {
+      padding: 1em;
+      margin-top: 0.5em;
+      padding: 1em 2em;
+      background-color: #bf8f88;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.543);
+
+      &:first-child {
+        border-radius: 0 0 0 20px;
+      }
+      &:last-child {
+        border-radius: 0 0 20px 0;
+      }
+
+      h4 {
+        background-color: rgba(255, 255, 255, 0.562);
+        border-radius: 20px;
+        padding: 0.5em;
+        font-size: 1.2em;
+        text-align: center;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
+        margin-bottom: 0.5em;
+      }
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5em;
+        padding: 0 0.5em;
+      }
+
+      li {
+        color: white;
+        list-style: circle;
+        list-style-position: inside;
+        padding: 0.5em;
+        //background-color: #866d424f;
+        border-radius: 20px;
+        //box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.507);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.442);
+        text-align: center;
+      }
+    }
+  }
+}

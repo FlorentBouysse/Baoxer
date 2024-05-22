@@ -1,0 +1,67 @@
+.fight-arena {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  //
+
+  .view {
+    height: 90%;
+  }
+
+  .fight-skills {
+    width: 100%;
+    height: 270px;
+    // background-color: rgba(255, 0, 0, 0.151);
+    padding: 0.3em;
+    transition: height ease 0.5s;
+    overflow-x: hidden;
+  }
+
+  .fight-skills-bot {
+    width: 100%;
+    height: 270px;
+    border-radius: 20px;
+    // background-color: rgba(4, 0, 255, 0.151);
+    padding: 0.3em;
+    transition: height ease 0.5s;
+    overflow-x: hidden;
+  }
+
+  button {
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 45px white;
+    margin: 3% 0;
+  }
+
+  .static {
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+  }
+
+  .launched {
+    transform: translateX(75%);
+    transition: transform 1s ease;
+  }
+
+  .static-npc {
+    transition: transform 0.5s ease;
+    transform: translateX(75%);
+  }
+
+  .launched-npc {
+    transform: translateX(0);
+    transition: transform 1s ease;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fight-arena {
+    button {
+      height: 75px;
+      width: 75px;
+    }
+  }
+}

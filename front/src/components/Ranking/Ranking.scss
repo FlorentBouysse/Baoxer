@@ -1,0 +1,144 @@
+@media screen and (min-width: 850px) {
+  .ranking {
+    padding: 10vh 10vw;
+    &-container {
+      box-shadow: 5px 5px 20px black;
+      animation: appearFromBottom 1s ease;
+      border-radius: 20px;
+    }
+    &-title {
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      background-color: #a02020;
+      text-align: center;
+      padding: 1em;
+      font-size: 2em;
+      color: white;
+    }
+    &-players-list {
+      height: 40vh;
+      overflow-y: scroll;
+    }
+
+    &-players-list .ranking-players:nth-child(1) {
+      background-color: #e2c461;
+      font-size: 1.2em;
+      .ranking-players-info-avatar {
+        height: 60px;
+        width: 60px;
+      }
+    }
+    &-players-list .ranking-players:nth-child(2) {
+      background-color: #9a9a9a;
+      font-size: 1.2em;
+      .ranking-players-info-avatar {
+        height: 60px;
+        width: 60px;
+      }
+    }
+    &-players-list .ranking-players:nth-child(3) {
+      background-color: #866b43;
+      font-size: 1.2em;
+      .ranking-players-info-avatar {
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    &-players-list::-webkit-scrollbar {
+      height: 10px;
+      width: 7px;
+    }
+
+    // scroll bar
+    &-players-list::-webkit-scrollbar-thumb {
+      background-color: #a02020;
+    }
+
+    // arriere plan de la scroll bar
+    &-players-list::-webkit-scrollbar-track {
+      background-color: rgb(240, 192, 177);
+    }
+
+    &-headers {
+      display: flex;
+      justify-content: space-between;
+
+      // padding: 0 2em;
+      h3 {
+        background-color: white;
+        width: 25%;
+        padding: 0.8em;
+        font-size: 1.1em;
+        text-align: center;
+      }
+      &-fight {
+        border-left: solid 1px rgb(194, 194, 194);
+      }
+      &-tournament {
+        border-left: solid 1px rgb(194, 194, 194);
+        border-right: solid 1px rgb(194, 194, 194);
+      }
+      &-ratio {
+        border-right: solid 1px rgb(194, 194, 194);
+      }
+    }
+    &-end {
+      height: 30px;
+      background-color: #a02020;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .ranking {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    max-height: 100vh;
+
+    &-title {
+      width: 100%;
+      background-color: #a02020;
+      text-align: center;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      padding: 0.5em;
+    }
+
+    .ranking-headers-tournament {
+      border-right: 1px solid white;
+    }
+
+    &-headers {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      // border: solid 1px black;
+      background-color: #d17d7d;
+      border-top: solid 1px rgb(255, 255, 255);
+      border-bottom: solid 1px rgb(255, 255, 255);
+
+      h3 {
+        width: 25%;
+        font-size: 0.6em;
+        text-align: center;
+        padding: 0.5em;
+        color: white;
+        // background-color: blue;
+      }
+      &-fight,
+      &-ratio {
+        border-left: solid 1px white;
+        border-right: solid 1px white;
+      }
+    }
+    &-players-list {
+      height: 100%;
+      overflow-y: auto;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}

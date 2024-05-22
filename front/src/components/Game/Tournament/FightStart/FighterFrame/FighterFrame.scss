@@ -1,0 +1,276 @@
+.fighter {
+  .turn-off {
+    background-color: rgba(0, 0, 0, 0.389);
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    border-radius: 20px;
+  }
+
+  .skill-icon-noEnergy {
+    width: 100%;
+
+    .noEnergy-button {
+      width: 100%;
+      height: 250px;
+      border-radius: 20px;
+      margin-top: 1em;
+      border: none;
+      animation: noEnergy 1.5s ease infinite alternate;
+    }
+    @keyframes noEnergy {
+      from {
+        box-shadow: 0px 0px 25px rgb(253, 185, 0);
+      }
+      to {
+        box-shadow: 0px 0px 25px rgb(253, 0, 0);
+      }
+    }
+  }
+  .Skills {
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0.5em 0;
+    padding: 5px;
+
+    &-damage,
+    &-energy {
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 0.2em 0.5em;
+    }
+    &-damage {
+      background-color: red;
+    }
+    &-energy {
+      background-color: rgb(229, 255, 0);
+    }
+  }
+
+  .buffDefense {
+    background-color: rgba(8, 0, 255, 0.719);
+    position: absolute;
+    width: 110%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    border-radius: 20px;
+    animation: buff 1.5s ease;
+  }
+
+  .buffEnergy {
+    background-color: rgba(229, 255, 0, 0.719);
+    position: absolute;
+    width: 110%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    border-radius: 20px;
+    animation: buff 1.5s ease;
+  }
+
+  .buffHealth {
+    background-color: rgba(0, 255, 0, 0.719);
+    position: absolute;
+    width: 110%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    border-radius: 20px;
+    animation: buff 1.5s ease;
+  }
+
+  @keyframes buff {
+    from {
+      height: 0%;
+      opacity: 1;
+    }
+    to {
+      height: 110%;
+      opacity: 0;
+    }
+  }
+
+  &-name {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.726);
+  }
+
+  &-image {
+    padding-top: 0.5em;
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.726);
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+
+    &-skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      flex-wrap: wrap;
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 0.5em;
+      gap: 0.5em;
+
+      .basic,
+      .defensive,
+      .special,
+      .heavy {
+        height: fit-content;
+        margin-top: 0.5em;
+
+        .skill-icon {
+          height: 10vh;
+
+          button {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.726);
+          }
+        }
+
+        .Skill {
+          max-width: 100%;
+          margin-top: 0.5em;
+          background-color: black;
+          padding: 0.2em;
+          border-radius: 20px;
+          box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.726);
+
+          &-damage {
+            background-color: red;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            padding: 0.2em 0.5em;
+          }
+
+          &-energy {
+            background-color: rgb(229, 255, 0);
+            border-radius: 20px;
+            padding: 0.2em 0.5em;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    &-stats {
+      margin-top: 0.5em;
+      padding: 0.5em;
+      border-radius: 20px;
+
+      .health-bar {
+        width: 100%;
+        background-color: rgb(37, 37, 37);
+        padding: 5px;
+        margin: 0.3em 0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.726);
+        .health-fight {
+          background-color: rgb(255, 0, 0);
+          width: 100%;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+          padding: 2px;
+          transition: width ease 0.5s;
+        }
+      }
+
+      .energy-bar {
+        width: 100%;
+        background-color: rgb(37, 37, 37);
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.726);
+        .energy-fight {
+          background-color: rgb(255, 251, 0);
+          width: 100%;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+          padding: 2px;
+          transition: width ease 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fighter {
+    max-height: fit-content;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: fit-content;
+    border-radius: 10px;
+
+    &-image {
+      img {
+        height: 100px;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+    &-info {
+      border-radius: 10px;
+      height: fit-content;
+      &-skills {
+        border-radius: 10px;
+        border: solid 1px white;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0.3em;
+        .basic,
+        .defensive,
+        .special,
+        .heavy {
+          .skill-icon {
+            height: 10vh;
+            button {
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      &-stats {
+        border: solid 1px white;
+        border-radius: 10px;
+        .health-bar,
+        .energy-bar {
+          padding: 3px;
+        }
+        .health-fight,
+        .energy-fight {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

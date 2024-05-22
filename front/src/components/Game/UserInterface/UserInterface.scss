@@ -1,0 +1,280 @@
+.ui {
+  position: absolute;
+  z-index: 1;
+
+  .player-info-button:active,
+  .player-info-map:active,
+  .settings:active {
+    transform: scale(1.4);
+  }
+
+  .music {
+    width: 60px;
+    height: 60px;
+    border: none;
+    margin-top: 2.5em;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 50%;
+    color: white;
+    transform: scale(1.5);
+    margin-left: 1em;
+    box-shadow: 0px 0px 13px #ffffff3d;
+    .player {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+    }
+    .played {
+      box-shadow: 0px 0px 13px #ffffff84;
+      svg {
+        animation: musicPlayin 1.5s ease-in-out infinite,
+          turn 3s linear infinite;
+      }
+    }
+    input {
+      -webkit-appearance: none;
+      margin-top: 1em;
+      width: 100%;
+      height: 10px;
+      background-color: #000000;
+      border-radius: 5px;
+      outline: none;
+    }
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: #a02020;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes musicPlayin {
+    0%,
+    100% {
+      color: white;
+    }
+    25% {
+      color: rgb(223, 138, 249);
+    }
+    75% {
+      color: rgb(132, 132, 252);
+    }
+  }
+
+  @keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .available-point {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 3px white;
+  }
+
+  &-info {
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+
+    &-avatar {
+      display: flex;
+      flex-direction: column;
+      .player-avatar {
+        margin-top: 0.5em;
+        height: 130px;
+        width: 130px;
+        border: solid 5px white;
+        border-radius: 50%;
+      }
+      .level {
+        width: 100%;
+        background-color: rgb(195, 53, 53);
+        border-radius: 20px;
+        margin-top: 1em;
+        text-align: center;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        font-weight: 500;
+        box-shadow: 5px 5px 15px black;
+        color: white;
+        letter-spacing: 2px;
+        border-bottom: solid 6px rgb(74, 20, 20);
+      }
+    }
+    &-stats {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 1%;
+      left: 150px;
+
+      .health-bar,
+      .stamina-bar,
+      .experience-bar {
+        width: 300px;
+        background-color: rgb(46, 46, 46);
+        padding: 0.2em;
+        margin: 4px 0;
+        border-radius: 20px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        height: fit-content;
+        box-shadow: 5px 5px 10px black;
+        font-size: 1.2em;
+
+        .health {
+          background: linear-gradient(red, rgb(255, 0, 0));
+          border-radius: 20px;
+          padding: 3px 0.5em;
+          transition: width 1s ease;
+          min-width: fit-content;
+        }
+        .stamina {
+          background-color: yellow;
+          border-radius: 20px;
+          padding: 3px 0.5em;
+          transition: width 1s ease;
+          min-width: fit-content;
+        }
+        .experience {
+          background: linear-gradient(rgb(14, 211, 14), rgb(14, 211, 14));
+          border-radius: 20px;
+          padding: 3px 0.5em;
+          transition: width 1s ease;
+          min-width: fit-content;
+        }
+      }
+    }
+
+    .player-info-button {
+      margin-top: 2em;
+    }
+
+    .player-info-map {
+      margin-top: 3em;
+    }
+  }
+  .player-info-button,
+  .player-info-map,
+  .settings {
+    width: 60px;
+    height: 60px;
+    border: none;
+    margin-top: 3em;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 50%;
+    color: white;
+    transform: scale(1.5);
+    margin-left: 1em;
+    box-shadow: 0px 0px 13px #ffffff3d;
+  }
+  .settings {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .ui {
+    .player {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .available-point {
+      height: 16px;
+      width: 16px;
+      border: solid 1px white;
+      padding: 0.1em;
+      font-size: 0.8em;
+    }
+
+    //
+    &-info {
+      //
+      &-avatar {
+        .player-avatar {
+          height: 55px;
+          width: 55px;
+          box-shadow: 5px 5px 10px black;
+        }
+        .level {
+          font-size: 0.6em;
+          box-shadow: 5px 5px 10px black;
+        }
+      }
+      &-stats {
+        left: 65px;
+        top: 5px;
+
+        .health-bar,
+        .stamina-bar,
+        .experience-bar {
+          width: 150px;
+          font-size: 0.6em;
+          margin: 0.2em 0;
+          .health,
+          .stamina,
+          .experience {
+            padding: 1px;
+            font-weight: 900;
+          }
+        }
+      }
+      .player-info-button,
+      .player-info-map,
+      .music {
+        height: 30px;
+        width: 30px;
+        font-size: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          transform: scale(1);
+        }
+      }
+      .music {
+        display: flex;
+        flex-direction: column;
+        button {
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+    .settings {
+      height: 30px;
+      width: 30px;
+      font-size: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

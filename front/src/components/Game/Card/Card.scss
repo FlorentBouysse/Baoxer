@@ -1,0 +1,110 @@
+.Card-container {
+  border-radius: 20px;
+  border: solid 5px rgba(255, 255, 255, 0.486);
+  padding: 0.5em;
+  transition: border 0.7s ease;
+  transition: transform 0.3s ease-in;
+  background-color: rgba(255, 255, 255, 0.486);
+  box-shadow: 5px 5px 15px black;
+  &:hover {
+    border: solid 5px white;
+    transform: rotate(1deg);
+    transition: transform 0.3s ease-in;
+  }
+  .Card {
+    background: url('https://img.freepik.com/free-vector/coloured-blurred-background_1112-511.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    padding: 1em;
+    width: 100%;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+
+    h2 {
+      background-color: #a02020;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 0.5em;
+      border-radius: 20px;
+      text-transform: uppercase;
+      height: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 900;
+    }
+    &-image {
+      width: 100%;
+      margin-top: 0.5em;
+      border-radius: 20px;
+      flex-grow: 1;
+    }
+    .home {
+      background: url('asset/Home/Leonardo_Diffusion_XL_une_chambre_vue_intrieur_en_pixel_art_ja_0.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .gym {
+      background: url('/asset/Gym/une_salle_de_muscula.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .tournament {
+      background: url('public/asset/tournament.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .work {
+      background: url('public/asset/Work/background.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .market {
+      background: url('asset/Home/Leonardo_Diffusion_XL_un_magasin_vue_intrieur_en_pixel_art_jap_1.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .fight {
+      background: url('public/asset/Fight/Leonardo_Diffusion_XL_un_gif_dune_salle_de_ring_en_pixel_art_j_2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-description {
+      padding: 0.5em;
+      background-color: #d88443;
+      margin-top: 0.5em;
+      border-radius: 20px;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.432);
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Card-container {
+    font-size: 0.5em;
+    margin: 0;
+    padding: 0.5em;
+    height: 65vh;
+    width: 40vw;
+    height: fit-content;
+    .Card {
+      height: 60vh;
+      h2 {
+      }
+      &-image {
+        min-height: 120px;
+        width: 100%;
+      }
+      &-description {
+        flex-grow: 1;
+        padding: 0.9em;
+      }
+    }
+  }
+}

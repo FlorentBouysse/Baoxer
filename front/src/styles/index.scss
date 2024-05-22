@@ -1,0 +1,48 @@
+@use 'reset';
+@use 'variables' as v;
+
+body {
+  margin: 0;
+  font-family: 'Pixelify Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background: url('public/asset/site.jpg');
+  animation: scrollBackground 25s ease infinite alternate;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.724);
+  }
+
+  // scroll bar
+  &::-webkit-scrollbar-thumb {
+    background-color: #a0202000;
+  }
+
+  // arriere plan de la scroll bar
+  &::-webkit-scrollbar-track {
+    background-color: rgba(240, 192, 177, 0);
+  }
+  @keyframes scrollBackground {
+    from {
+      background-position: 0% 0%;
+      background-size: cover;
+    }
+    to {
+      background-position: 100% 100%;
+      background-size: cover;
+    }
+  }
+}
+
+button {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

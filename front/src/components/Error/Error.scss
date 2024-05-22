@@ -1,0 +1,44 @@
+.error {
+  padding: 10vh 30vw;
+  &-page {
+    width: 30vw;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .notFound {
+    box-shadow: 0 0 45px rgb(0, 0, 0);
+    background: url('https://i.pinimg.com/originals/fe/df/71/fedf7125acf620e856b6d09ef44eee51.gif');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    border-radius: 20px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 31%;
+    left: 37.5%;
+    animation: growW 1s ease infinite;
+    width: 200px;
+    height: 75px;
+    border-radius: 20px;
+    border: none;
+    background-color: #a02020;
+    box-shadow: 0 0 15px white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  @keyframes growW {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+  }
+}
