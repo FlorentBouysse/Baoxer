@@ -1,0 +1,4 @@
+framework:
+    mailer:
+        dsn: 'mailjet+api://793cc069443b97de3e666cb28a74938f:1ff14212fb31e622bb2e10e70ba87555@api.mailjet.com'
+        

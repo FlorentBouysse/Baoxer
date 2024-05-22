@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des compétences{% endblock %}
+
+{% block body %}
+    <h1>Liste des compétences</h1>
+    <a class="btn btn-success btn-sm" href="{{ path("app_skill_create") }}" role="button">Créer une compétence</a>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Niveau requis</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Description</th>
+      <th scope="col">Icone</th>
+       <th scope="col">Modifier / Supprimer</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+  {% for skill in skills %}
+    <tr>
+      <th scope="row">{{ skill.levelRequired }}</th>
+      <td>{{ skill.name }}</td>
+      <td>{{ skill.description }}</td>
+      <td>{{ skill.icon }}</td>
+      <th scope="col">
+          <a class="btn btn-warning btn-sm" href="{{ path("app_skill_update", {id: skill.id}) }}" role="button">Modifier</a>
+          <a class="btn btn-danger btn-sm" href="{{ path("app_skill_delete", {id: skill.id}) }}" role="button">Supprimer</a>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

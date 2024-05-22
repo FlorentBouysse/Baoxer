@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des boxeurs{% endblock %}
+
+{% block body %}
+<h1>Listes des boxeurs</h1>
+
+ <a class="btn btn-success btn-sm" href="{{ path("app_boxer_create") }}" role="button">Créer un boxeur</a>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Compte utilisateur</th>
+      <th scope="col">Pseudo / Nom du PNJ</th>
+      <th scope="col">Niveau</th>
+      <th scope="col">Agiliter</th>
+      <th scope="col">Endurance</th>
+      <th scope="col">Force</th>
+      <th scope="col">Santé</th>
+      <th scope="col">Energie</th>
+      <th scope="col">Image</th>
+      <th scope="col">PNJ</th>
+       <th scope="col">Modifier / Supprimer</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+  
+  {% for boxer in boxers %}
+    <tr>
+      <th scope="row">{{ boxer.id }}</th>
+      <td> {{ boxer.user is not null ? boxer.user.email : 'PNJ' }}</td>
+      <td> {{ boxer.username }}</td>
+      <td>{{ boxer.level.id }}</td>    
+      <td>{{ boxer.agility.id }}</td>
+      <td>{{ boxer.stamina.id }}</td>
+      <td>{{ boxer.strength.id }}</td> 
+      <td>{{ boxer.health }}</td>
+      <td>{{ boxer.energy }}</td>
+      <td>{{ boxer.picture }}</td>
+      <td>{{ boxer.npc }}</td>
+      <th scope="col">
+          <a class="btn btn-warning btn-sm" href="{{ path("app_boxer_update", {id: boxer.id}) }}" role="button">Modifier</a>
+          <a class="btn btn-danger btn-sm" href="{{ path("app_boxer_delete", {id: boxer.id}) }}" role="button">Supprimer</a>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

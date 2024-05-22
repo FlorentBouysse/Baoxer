@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Créer une compétence{% endblock %}
+
+{% block body %}
+    <h1>Modifier la compétence : {{ skill.name }}</h1>
+
+    {{form(form)}}
+    <a href="{{ path('app_skill') }}">Retour à la liste des compétences</a>
+{% endblock %}

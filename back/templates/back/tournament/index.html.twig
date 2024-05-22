@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Tournois{% endblock %}
+
+{% block body %}
+<h1>Liste des tournois</h1>
+  <a class="btn btn-success btn-sm" href="{{ path("app_tournament_create") }}" role="button">Créer un tournoi</a>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom du tournois</th>
+      <th scope="col">Récompense</th>
+      <th scope="col">Niveau Gagner</th>
+       <th scope="col">Modifier / Supprimer</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+  {% for tournament in tournaments %}
+    <tr>
+      <th scope="row">{{ tournament.id }}</th>
+      <td>{{ tournament.name }}</td>
+      <td>{{ tournament.moneyPrize }}</td>
+      <td>{{ tournament.level }}</td>
+      <th scope="col">
+          <a class="btn btn-warning btn-sm" href="{{ path("app_tournament_update", {id: tournament.id}) }}" role="button">Modifier</a>
+          <a class="btn btn-danger btn-sm" href="{{ path("app_tournament_delete", {id: tournament.id}) }}" role="button">Supprimer</a>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

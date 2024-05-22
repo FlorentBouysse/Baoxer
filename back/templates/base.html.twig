@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="https://bootswatch.com/5/spacelab/bootstrap.min.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path("app_main") }}">Baoxing</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    {# Ajout de la condition si on est sur la route qui est égale à la current route alors on active la class nav-link#}
+                    <a class="nav-link {% if app.request.get('_route') == 'app_main' %}active{% endif %}" aria-current="page" href="{{ path("app_main") }}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+
+                    <a class="nav-link {% if app.request.get('_route') == 'app_user_index' %}active{% endif %}" href="{{ path("app_user_index") }}">Utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_item_list' %}active{% endif %}" href="{{ path("app_item_list") }}">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_skill' %}active{% endif %}" href="{{ path("app_skill") }}">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_boxer_index' %}active{% endif %}" href="{{ path("app_boxer_index")}}">Boxeurs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_tournament_index' %}active{% endif %}" href="{{ path("app_tournament_index")}}">Tournois</a>
+                    </li>
+                    <li class="nav-item">
+                    {% if app.user %}
+                            <a class="nav-link" href="{{ path('app_login') }}">Déconnexion</a>
+                    {% else %}
+                            <a class="nav-link {% if app.request.get('_route') == 'app_login' %}active{% endif %}" href="{{ path('app_login') }}">Connexion</a>
+                    {% endif %} 
+                    
+
+                    </li>
+                    
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container my-3">
+            {% block body %}
+                
+                {% block subBody %}
+
+                {% endblock %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

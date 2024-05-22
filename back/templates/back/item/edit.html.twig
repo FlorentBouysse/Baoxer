@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Modifier l'article {{ item.name }}{% endblock %}
+
+{% block body %}
+    <h1>Modifier l'article {{ item.name }}</h1>
+
+    {{form(form)}}
+    <a href="{{ path('app_item_list') }}">Retour à la liste des articles</a>
+{% endblock %}

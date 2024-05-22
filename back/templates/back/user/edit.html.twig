@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Modifier l'utilisateur {{ user.username }}{% endblock %}
+
+{% block body %}
+    <h1>Modifier l'utilisateur {{ user.username }}</h1>
+
+    {{form(form)}}
+    <a href="{{ path('app_user_index') }}">Retour à la liste des utilisateurs</a>
+{% endblock %}

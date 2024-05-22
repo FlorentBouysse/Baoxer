@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Modifier un tournois{% endblock %}
+
+{% block body %}
+    <h1>Modifier {{ tournament.name }}</h1>
+
+    {{form(form)}}
+    <a href="{{ path('app_tournament_index') }}">Retour à la liste des compétences</a>
+{% endblock %}
