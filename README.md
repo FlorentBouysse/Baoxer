@@ -4,15 +4,16 @@
 
 Projet de fin d'étude O'clock lors de ma formation Développeur Web du 07/23 au 12/23.
 
-[Présentation Youtube](https://www.youtube.com/watch?v=ipFrNFLpNy0)
+[Présentation Youtube](https://www.youtube.com/watch?v=ipFrNFLpNy0) <br>
+[Post Linkedin](https://www.linkedin.com/posts/florent-bouysse_baoxers-projet-de-fin-de-formation-oclock-activity-7145718881813200896-_Fk_?utm_source=share&utm_medium=member_desktop)
 
 Projet réalisé sur une période de 1 mois soit 4 sprint d'une semaine avec une équipe de 5 personnes :
-FrontEnd
+FrontEnd => ReactJS
 - [Mickael Dahan](https://www.linkedin.com/in/mickael-dahan-6008422a6/)
 - [Jiovani Vianey](https://www.linkedin.com/in/jiovani-vianey/)
 - [Eleonore Tranchard](https://www.linkedin.com/in/eleonore-tranchard-107b6b288/)
 
-BackEnd
+BackEnd => Symfony
 - [Cédric Jeanne-Rose](https://www.linkedin.com/in/c%C3%A9dric-jeanne-rose-a18497143/)
 - [Moi même](https://www.linkedin.com/in/florent-bouysse/)
 
