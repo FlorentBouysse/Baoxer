@@ -7,7 +7,7 @@ Projet de fin d'étude O'clock lors de ma formation Développeur Web du 07/23 au
 [Présentation Youtube](https://www.youtube.com/watch?v=ipFrNFLpNy0) <br>
 [Post Linkedin](https://www.linkedin.com/posts/florent-bouysse_baoxers-projet-de-fin-de-formation-oclock-activity-7145718881813200896-_Fk_?utm_source=share&utm_medium=member_desktop)
 
-Projet réalisé sur une période de 1 mois soit 4 sprint d'une semaine avec une équipe de 5 personnes :
+Projet réalisé sur une période de 1 mois soit 4 sprint d'une semaine avec une équipe de 5 personnes :<br>
 FrontEnd => ReactJS
 - [Mickael Dahan](https://www.linkedin.com/in/mickael-dahan-6008422a6/)
 - [Jiovani Vianey](https://www.linkedin.com/in/jiovani-vianey/)
